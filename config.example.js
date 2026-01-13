@@ -1,0 +1,3 @@
+const CONFIG = {
+    API_KEY: "YOUR_OPENROUTER_API_KEY_HERE"
+};

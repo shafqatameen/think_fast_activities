@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Think Fast, Talk Smart: Workshop v2</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<div id="api-modal">
+    <div class="modal-content">
+        <h2>🛠️ Workshop Setup</h2>
+        <p>Paste your OpenRouter API Key to begin.</p>
+        <input type="password" id="api-key-input" placeholder="sk-or-..." autocomplete="off">
+        <button id="btn-start-session">Start Workshop</button>
+        <p style="font-size:0.8rem; margin-top:10px; color:#666;">
+            Need a key? <a href="https://openrouter.ai/" target="_blank">Get one free here</a>.
+        </p>
+    </div>
+</div>
+
+<div class="chat-app">
+    <header>
+        <h1>🎤 Coach</h1>
+        <div style="display:flex; gap:10px; align-items:center;">
+            <button id="btn-speaker" class="icon-btn" title="Toggle Text-to-Speech">🔊</button>
+            <select id="model-select">
+                <option value="meta-llama/llama-3.3-70b-instruct:free">Llama 3.3 70B (Free)</option>
+                <option value="google/gemini-2.0-flash-exp:free">Gemini 2.0 Flash (Free)</option>
+                <option value="meta-llama/llama-3-8b-instruct:free">Llama 3 8B (Free)</option>
+                <option value="mistralai/mistral-7b-instruct:free">Mistral 7B (Free)</option>
+                <option value="google/gemini-flash-1.5">Gemini 1.5 Flash (Paid)</option>
+            </select>
+        </div>
+    </header>
+
+    <div id="chat-window">
+        <div class="message system">Session Initialized. Connect to start...</div>
+    </div>
+
+    <div class="input-area">
+        <input type="text" id="user-input" placeholder="Type your response here..." disabled>
+        <button id="btn-mic" class="icon-btn" disabled title="Speak">🎙️</button>
+        <button id="btn-send" disabled>Send</button>
+    </div>
+
+    <!-- Activity Selection Screen -->
+    <div id="activity-menu" class="hidden">
+        <h2 style="color:white; margin-bottom:30px; font-size:2rem;">Choose Your Workout 🏋️</h2>
+        <div class="activity-grid">
+            <button class="activity-btn" data-act="Shout the Wrong Name">
+                <h3>🗣️ Shout Wrong Name</h3>
+                <p>Look at images and name them wrong!</p>
+            </button>
+            <button class="activity-btn" data-act="Give an Imaginary Gift">
+                <h3>🎁 Imaginary Gift</h3>
+                <p>Receive a gift and explain why you love it.</p>
+            </button>
+            <button class="activity-btn" data-act="Spelling Everything">
+                <h3>🔤 Spelling Bee</h3>
+                <p>Conversations but s-p-e-l-l-e-d out.</p>
+            </button>
+            <button class="activity-btn" data-act="Selling with Structure">
+                <h3>💼 Sell It</h3>
+                <p>Pitch an object using a structure.</p>
+            </button>
+        </div>
+    </div>
+</div>
+
+<script src="config.js"></script>
+<script src="script.js"></script>
+
+</body>
+</html>
