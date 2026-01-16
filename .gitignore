@@ -1,14 +1,1 @@
-# Secrets
-config.js
 .env
-
-# System files
-.DS_Store
-Thumbs.db
-
-# Logs
-*.log
-
-# Node modules (if added later)
-node_modules/
-.npm/
